@@ -1,0 +1,37 @@
+# Virtual environments
+myenv/
+tfenv/
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Model files (too large for GitHub - use Git LFS or download separately)
+*.h5
+*.keras
+*.pb
+*.tflite
+
+# Temp files
+tmpclaude-*
+*.log
+api_startup.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test_image.jpg
+model_config_dump.json
