@@ -6,7 +6,7 @@ import os
 # -----------------------------
 # Config
 # -----------------------------
-API_URL = os.environ.get("API_URL", "http://127.0.0.1:8000")
+API_URL = os.environ.get("API_URL", "https://guptavaidehi-cnn-ai-real-api.hf.space")
 
 # -----------------------------
 # Page Setup
@@ -134,7 +134,7 @@ if uploaded_file is not None:
     # Show image centered
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image(image, caption=f"📁 {uploaded_file.name}", use_column_width=True)
+        st.image(image, caption=f"📁 {uploaded_file.name}")
 
     # Predict button centered
     col1, col2, col3 = st.columns([1, 1, 1])

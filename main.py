@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from tensorflow.keras.models import load_model
 from PIL import Image
@@ -15,6 +16,15 @@ app = FastAPI(
     title="AI vs Real Image API",
     description="Detects AI-generated images vs real images",
     version="1.0.0"
+)
+
+# Enable CORS (frontend alag domain se call karega)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # -----------------------------
